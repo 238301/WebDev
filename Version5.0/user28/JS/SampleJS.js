@@ -13,3 +13,27 @@ function Scroll() {
     window.setTimeout("Scroll()", 0);
 }
 Scroll();
+
+
+function allCaps() {
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
+
+function typeAlert() {
+  alert("You pressed a key inside the input field");
+}
+function whichElement(e) {
+  var targ;
+  if (!e) {
+    var e = window.event;
+  }
+  if (e.target) {
+    targ=e.target;
+  } else if (e.srcElement) {
+    targ=e.srcElement;
+  }
+  var tname;
+  tname = targ.tagName;
+  alert("You clicked on a " + tname + " element.");
+}
