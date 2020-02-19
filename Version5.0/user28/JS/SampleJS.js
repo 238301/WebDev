@@ -37,3 +37,15 @@ function whichElement(e) {
   tname = targ.tagName;
   alert("You clicked on a " + tname + " element.");
 }
+
+function confirmInput() {
+  fname = document.forms[0].fname.value;
+  alert("Hello " + fname + "! You will now be redirected to www.w3Schools.com"); <!-- CHANGE TO DIFFRENT WEBSITE-->
+}
+function fastCap() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+function coordinates(event) {
+  document.getElementById("demo").innerHTML = "X = " + event.screenX + "<br>Y = " + event.screenY;
+}
