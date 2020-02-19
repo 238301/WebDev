@@ -40,7 +40,7 @@ function whichElement(e) {
 
 function confirmInput() {
   fname = document.forms[0].fname.value;
-  alert("Hello " + fname + "! You will now be redirected to www.w3Schools.com"); <!-- CHANGE TO DIFFRENT WEBSITE-->
+  alert("Hello " + fname + "! You will now be redirected to Endless Horse"); <!-- CHANGE TO DIFFRENT WEBSITE-->
 }
 function fastCap() {
   var x = document.getElementById("fname");
@@ -54,8 +54,14 @@ function isKeyPressed(event) {
   if (event.shiftKey == 1) {
     text = "The shift key was pressed!";
   }
-  document.getElementById("demo").innerHTML = text;
+  document.getElementById("shift").innerHTML = text;
 }
 function displayDate() {
   document.getElementById("demo").innerHTML = Date();
+}
+function windowSize() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  document.getElementById("resize").innerHTML = txt;
 }
