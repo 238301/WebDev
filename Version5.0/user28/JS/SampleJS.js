@@ -49,3 +49,13 @@ function fastCap() {
 function coordinates(event) {
   document.getElementById("demo").innerHTML = "X = " + event.screenX + "<br>Y = " + event.screenY;
 }
+function isKeyPressed(event) {
+  var text = "The shift key was NOT pressed!";
+  if (event.shiftKey == 1) {
+    text = "The shift key was pressed!";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}

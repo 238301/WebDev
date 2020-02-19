@@ -143,6 +143,13 @@
             <p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
             Enter your name: <input type="text" id="fname" onkeyup="fastCap()">
         </div>
+
+        <div class="col-md-6">
+            <h2>You know what time it is?</h2>
+            <p id="demo">This is a paragraph.</p>
+
+            <button type="button" onclick="displayDate()">Display Date</button>
+        </div>
         <div class="col-md-6">
             <form onsubmit="confirmInput()" action="https://www.w3schools.com/">
                 <!-- Change to diffrent web site-->
@@ -158,8 +165,16 @@
             </div>
 
             <div class="row">
+                <p onmousedown="isKeyPressed(event)">
+
+                <p>Click on this paragraph. An alert box will tell you if you pressed the shift key or not.</p>
+
+                    <p id="demo"></p>
+            </div>
+
+            
                 <div class="col-md-6">
-                    <div onmousedown="whichElement(event)" <p> Click somewhere in the document. An alert box will alert the name of the element you clicked on. </p>
+                    <div onmousedown="whichElement(event)" <p Click somewhere in the document. An alert box will alert the name of the element you clicked on. </p>
                         <h3> This is a heading </h3>
                         <img border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
                         <p> This is a paragraph. </p>
