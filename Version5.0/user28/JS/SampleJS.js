@@ -43,7 +43,7 @@ function confirmInput() {
   alert("Hello " + fname + "! You will now be redirected to Endless Horse"); <!-- CHANGE TO DIFFRENT WEBSITE-->
 }
 function fastCap() {
-  var x = document.getElementById("fname");
+  var x = document.getElementById("fastCap");
   x.value = x.value.toUpperCase();
 }
 function coordinates(event) {
@@ -64,4 +64,10 @@ function windowSize() {
   var h = window.outerHeight;
   var txt = "Window size: width=" + w + ", height=" + h;
   document.getElementById("resize").innerHTML = txt;
+}
+function pageReady(alert) {
+  alert("You are very lucky you get to see my website now");
+}
+function yellowBox(x) {
+  x.style.background = "yellow";
 }
