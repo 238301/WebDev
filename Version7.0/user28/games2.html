@@ -5,12 +5,13 @@
     -->
 
 <head>
-     <link rel="shortcut icon" href="Favicon2.ico" <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="SHS WebDev Menu Sample">
+    <link rel="shortcut icon" href="Favicon2.ico" <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Menu Sample">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Games Site</title>
+    <title>Games</title>
 
     <link href="CSS/SampleCSS.css" rel="stylesheet" type="text/css">
     <link href="games.html" rel="stylesheet" type="text/css">
@@ -115,11 +116,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <!---------------------------------- Edit These Items in your Menu ------------->
-                    <a href="MainIndex.html" class="nav-item nav-link active">| Home |</a>
-                    <a href="#" class="nav-item nav-link active">| About Me |</a>
-                    <a href="#" class="nav-item nav-link active" tabindex="-2">| Digital Design and Photography |</a>
-                    <a href="games2.html" class="nav-item nav-link active" tabindex="-1">| Games |</a>
-                    <a href="mailto:jjszot@gmail.com?Subject=Hello" class="nav-item nav-link active" tabindex="-2">| Contact |</a>
+                    <a href="MainIndex.html" class="nav-item nav-link active" onmouseover="style.color='red'" onmouseout="style.color='white'"> | Home |</a>
+                    <a href="AboutMe.html" class="nav-item nav-link active" onmouseover="style.color='red'" onmouseout="style.color='white'">| About Me |</a>
+                    <a href="DigitalDesign.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Digital Design |</a>
+                    <a href="Photography.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Photography |</a>
+                    <a href="games2.html" class="nav-item nav-link active" tabindex="-1" onmouseover="style.color='red'" onmouseout="style.color='white'">| Games |</a>
+                    <a href="VeryImportant.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Very Important |</a>
+                    <a href="mailto:jjszot@gmail.com?Subject=Hello" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Contact |</a>
                     <!----------------------------------^ Edit These Items in your Menu ^ ------------->
                 </div>
                 <div class="navbar-nav ml-auto">
@@ -128,6 +131,7 @@
             </div>
         </nav>
     </div>
+
     <div class="row">
         <div class="col-md-6" class=col-lg-8 class=col-sm-4>
             Enter your name: <input type="text" id="fname" onblur="allCaps()">
@@ -161,7 +165,7 @@
                 <p onmousedown="coordinates(event)">
                     Click this paragraph, to display the x and y coordinates of the cursor, relative to the screen. </p>
                 <p id="demo"></p>
-                
+
             </div>
             <p onmousedown="isKeyPressed(event)">
                 <p>Click on this paragraph. An alert box will tell you if you pressed the shift key or not.</p>
