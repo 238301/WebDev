@@ -5,7 +5,8 @@
     -->
 
 <head>
-    <link rel="shortcut icon" href="images/Favicon2.ico"> <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/Favicon2.ico">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="SHS WebDev Menu Sample">
@@ -28,8 +29,14 @@
         <!-- Custom styles for this template -->
         <style .button { background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; }></style>
     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#accordion").accordion();
+        });
 
-
+    </script>
 </head>
 
 <body>
@@ -58,12 +65,30 @@
             </div>
         </nav>
     </div>
-
-    <center>My name is User #28</center>
     
+    <h1> FAQ </h1>
+    <div id="accordion">
+        <h3> Who is JJ?? </h3>
+        <div>
+            <p>
+           Hi I'm JJ. JJ is me. 
+            </p>
+        </div>
+        <h3>Question 2</h3>
+        <div>
+            <p>
+               No one has asked a second question I'll lyk when someone does 
+            </p>
+        </div>
 
-</script>
-
+        <h3>Question 4</h3>
+        <div>
+            <p>
+               Yea I skipped question 3 
+            </p>
+         
+        </div>
+    </div>
 
 </body>
 

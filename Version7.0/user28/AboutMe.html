@@ -58,6 +58,21 @@
         }
 
     </style>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+$(document).ready(function(){
+    // Hide displayed paragraphs
+    $(".hide-btn").click(function(){
+        $("p").hide();
+    });
+    
+    // Show hidden paragraphs
+    $(".show-btn").click(function(){
+        $("p").show();
+    });
+});
+</script>
 </head>
 
 <body>
@@ -88,49 +103,13 @@
             </div>
         </nav>
     </div>
+    
+     <button type="button" class="hide-btn">Hide Paragraphs</button> 
+    <button type="button" class="show-btn">Show Paragraphs</button>
+    <p>Hello reader,</p>
+    <p> My name is JJ Szot and I do some digital art stuff sometimes. I think they're ok not great but not horrible idk.</p>
 
-    <button class="accordion">Who is ME??</button>
-    <div class="panel">
-        <p>
-        
-        
-        </p>
-    </div>
-
-    <button class="accordion">Section 2</button>
-    <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <button class="accordion">Section 3</button>
-    <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-
-    </script>
-
-    <p> Hello reader,
-
-
-        My name is JJ Szot and I do some digital art stuff sometimes. I think they're ok not great but not horrible idk.
-
-        You can contact me and let me know what you think make sure to check out the Very Important page because its very important. </p>
+    <p> You can contact me and let me know what you think make sure to check out the Very Important page because its very important. </p>
 
 </body>
 

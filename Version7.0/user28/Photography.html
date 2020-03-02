@@ -28,7 +28,32 @@
         <!-- Custom styles for this template -->
         <style .button { background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; }></style>
     </div>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <script>
+$(document).ready(function(){
+    $(window).scroll(function() {
+        $("p").show().fadeOut("slow");
+    });
+});
+</script>
+    <style>
+    p{
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        font: bold 34px sans-serif;
+        background: #f0e68c;
+        position: fixed;
+        top: 50px;
+        display: none;
+    }
+    .dummy-content{
+        height: 600px;
+        font: 34px sans-serif;
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
@@ -71,6 +96,9 @@
     <img border="0" src="images/Backflip.jpg" alt="Back flip" width="600" height="450">
     
     <img border="0" src="images/Mackenzie.jpg" alt="mackenzie " width="500" height="450">
+    
+     <p>Scroll Happened!</p>
+   
     
     
 </body>
