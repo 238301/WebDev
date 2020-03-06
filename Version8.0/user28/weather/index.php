@@ -89,6 +89,23 @@ $currentTime = time();
         </div>
     </div>
 
+    <?php
+$x = 100;  
+$y = "90";
+if ($x==$y){
+$color='red';
+}
+else{
+$color= 'blue';
+}
+
+
+
+var_dump($x < $y); // returns false because values are equal
+echo $color;
+?>
+
+    <h1 style="background-color:<?php echo $color?>;">hello</h1>
 
 </body>
 
