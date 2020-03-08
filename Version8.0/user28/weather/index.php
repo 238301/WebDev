@@ -31,6 +31,7 @@ $currentTime = time();
 <head>
     <title>Forecast Weather using OpenWeatherMap with PHP</title>
 
+
     <style>
         body {
             font-family: Arial;
@@ -90,22 +91,43 @@ $currentTime = time();
     </div>
 
     <?php
-$x = 100;  
-$y = "90";
-if ($x==$y){
+$x= "32";  
+$y = "100";
+if ($temp<$x){
 $color='red';
 }
 else{
 $color= 'blue';
 }
 
-
-
 var_dump($x < $y); // returns false because values are equal
 echo $color;
 ?>
+    <style="background-color:<?php echo $color?>;">
+        </style>
 
-    <h1 style="background-color:<?php echo $color?>;">hello</h1>
+        <div class="container">
+            <div class="app-title">
+                <p>Weather</p>
+            </div>
+            <div class="notification"> </div>
+            <div class="weather-container">
+                <div class="weather-icon">
+                    <img src="icons/unknown.png" alt="">
+                </div>
+                <div class="temperature-value">
+                    <p>- °<span>C</span></p>
+                </div>
+                <div class="temperature-description">
+                    <p> - </p>
+                </div>
+                <div class="location">
+                    <p>-</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
 
 </body>
 
