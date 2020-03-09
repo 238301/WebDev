@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Movie Poster Database
+        Name:
+        Date Completed:
+    -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Menu Sample">
+
+    <meta name="author" content="Ben Howdle and Dan Matthew">
+    <meta name="description" content="A responsive movie poster grabber">
+    <title>Front Row by Ben Howdle</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+    <!--jQuery, linked from a CDN-->
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="http://use.typekit.com/oya4cmx.js"></script>
+    <script type="text/javascript">
+        try {
+            Typekit.load();
+        } catch (e) {}
+
+    </script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Movie Poster Finder App</title>
+
+    <!-- Bootstrap core JS -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JS needed to load poster -->
+    <script type="text/javascript" src="scripts.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        .menu {
+            margin: 0px;
+        }
+
+        .wideMargin {
+            margin: 15px;
+        }
+
+        #footer {
+            font-size: 12px;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!---------------------------------- Edit These Items in your Menu ------------->
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <a href="#" class="nav-item nav-link">About Me</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Music</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-2">Lists</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled" tabindex="-2">Contact</a>
+                    <!----------------------------------^ Edit These Items in your Menu ^ ------------->
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <div class="example-div">
+
+            <h1>Search</h1>
+
+            <section id="fetch">
+                <form name="fetch">
+                    <input type="text" placeholder="Enter a movie title" id="term" value="Shrek" />
+                    <input type="submit" id="search" value="Find me a poster" />
+                </form>
+            </section>
+
+            <section id="poster">
+
+            </section>
+            <footer>
+                <p>The MovieDB</p>
+            </footer>
+
+        </div>
+
+
+    </div><!-- /.container -->
+
+    <div class="container">
+        <header>
+            <h1>Front Row</h1>
+        </header>
+        <section id="fetch">
+            <input type="text" placeholder="Enter a movie title" id="term" />
+            <button id="search">Find me a poster</button>
+        </section>
+        <section id="poster">
+        </section>
+        <footer>
+            <p>Created by <a href="http://twostepmedia.co.uk">Ben Howdle</a></p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script>
+        $(document).ready(function() {
+
+            $('#term').focus(function() {
+                var full = $("#poster").has("img").length ? true : false;
+                if (full == false) {
+                    $('#poster').empty();
+                }
+            });
+
+            var getPoster = function() {
+
+                var film = $('#term').val();
+
+                if (film == ’) {
+
+                    $('#poster').html("<h2 class='loading'>Ha! We haven't forgotten to validate the form! Please enter something.</h2>");
+
+                } else {
+
+                    $('#poster').html("<h2 class='loading'>Your poster is on its way!</h2>");
+
+                    $.getJSON("http://api.themoviedb.org/2.1/Movie.search/en/json/
+                        23 afca60ebf72f8d88cdcae2c4f31866 / " + film + " ? callback = ? ", function(json) {
+                        if (json != "Nothing found.") {
+                            $('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + json[0].posters[0].image.url + ' />');
+                        } else {
+                            $.getJSON("http://api.themoviedb.org/2.1/Movie.search/en/json/
+                                23 afca60ebf72f8d88cdcae2c4f31866 / goonies ? callback = ? ", function(json) {
+                                console.log(json); $('#poster').html('<h2 class="loading">We'
+                                    re afraid nothing was found
+                                    for that search.Perhaps you were looking
+                                    for The Goonies ? < /h2><img id="thePoster" src=' + json[0].posters[0].image.url + ' / > ');
+                                });
+                        }
+                    });
+
+            }
+
+            return false;
+        }
+
+        $('#search').click(getPoster); $('#term').keyup(function(event) {
+            if (event.keyCode == 13) {
+                getPoster();
+            }
+        });
+
+        })
+
+    </script>
+
+</body>
+
+</html>
