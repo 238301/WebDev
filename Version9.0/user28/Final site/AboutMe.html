@@ -1,0 +1,115 @@
+<html lang="en">
+<!--Version 7.0 
+	Name:
+	Date Completed:
+    -->
+
+<head>
+    <link rel="shortcut icon" href="images/Favicon2.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Menu Sample">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <div>
+        <link href="CSS/SampleCSS.css" rel="stylesheet" type="text/css">
+        <link href="games2.html" rel="stylesheet" type="text/css">
+        <script src="JS/SampleJS.js"></script>
+        <!-- Bootstrap core JS -->
+        <!-- These are needed to get the responsive menu to work -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="JS/SampleJS.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="CSS/SampleCSS.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template -->
+        <style .button { background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; }></style>
+    </div>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+$(document).ready(function(){
+    // Hide displayed paragraphs
+    $(".hide-btn").click(function(){
+        $("p").hide();
+    });
+    
+    // Show hidden paragraphs
+    $(".show-btn").click(function(){
+        $("p").show();
+    });
+});
+</script>
+</head>
+
+<body>
+   <div class="menu">
+        <nav class="navbar navbar-expand-md navbar sticky-top navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!---------------------------------- Edit These Items in your Menu ------------->
+                    <a href="MainIndex.html" class="nav-item nav-link active" onmouseover="style.color='red'" onmouseout="style.color='white'"> | Home |</a>
+                    <a href="AboutMe.html" class="nav-item nav-link active" onmouseover="style.color='red'" onmouseout="style.color='white'">| About Me |</a>
+                    <a href="DigitalDesign.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Digital Design |</a>
+                    <a href="Photography.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Photography |</a>
+                    <a href="games2.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Games |</a>
+                    <a href="VeryImportant.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Very Important |</a>
+                    <a href="Movies.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Movies |</a>
+                    <a href="mailto:jjszot@gmail.com?Subject=Hello" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Contact |</a>
+                    <!----------------------------------^ Edit These Items in your Menu ^ ------------->
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+     <button type="button" class="hide-btn">Hide Paragraphs</button> 
+    <button type="button" class="show-btn">Show Paragraphs</button>
+    <p>Hello reader,</p>
+    <p> My name is JJ Szot and I do some digital art stuff sometimes. I think they're ok not great but not horrible idk.</p>
+
+    <p> You can contact me and let me know what you think make sure to check out the Very Important page because its very important. </p>
+
+</body>
+
+</html>
