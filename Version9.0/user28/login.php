@@ -121,16 +121,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body>
-    <div class="menu">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSMgZJOU6m518_A443vctOUHCbiSFtcAJMJ8i4sVyZ8dW4-IvR6' height=50px width=50px></a>
+   <div class="menu">
+        <nav class="navbar navbar-expand-md navbar sticky-top navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!---------------------------------- Edit These Items in your Menu ------------->
+                    <a href="MainIndex.html" class="nav-item nav-link active" onmouseover="style.color='red'" onmouseout="style.color='white'"> | Home |</a>
+                    <a href="AboutMe.html" class="nav-item nav-link active" onmouseover="style.color='red'" onmouseout="style.color='white'">| About Me |</a>
+                    <a href="DigitalDesign.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Digital Design |</a>
+                    <a href="Photography.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Photography |</a>
+                    <a href="games2.html" class="nav-item nav-link active" tabindex="-1" onmouseover="style.color='red'" onmouseout="style.color='white'">| Games |</a>
+                    <a href="VeryImportant.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Very Important |</a>
+                    <a href="Movies.html" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Movies |</a>
+                    <a href="mailto:jjszot@gmail.com?Subject=Hello" class="nav-item nav-link active" tabindex="-2" onmouseover="style.color='red'" onmouseout="style.color='white'">| Contact |</a>
+                    <!----------------------------------^ Edit These Items in your Menu ^ ------------->
+                </div>
                 <div class="navbar-nav ml-auto">
-                    <a href="login.php" class="nav-item nav-link active">Login</a>
+                    <a href="reset_password.php" class="nav-item nav-link active"><i class="fa fa-cog fa-lg" aria-hidden="true"></i><?php echo htmlspecialchars($_SESSION["username"]); ?></a>
+
+                    <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+                    echo "<a href='logout.php' class='nav-item nav-link btn-danger' onclick='return confirm(\"Are you sure?\");'> Logout </a>";
+                    } else { echo "<a href='login.php' class='nav-item nav-link'> Login </a>";} ?>
+
                 </div>
             </div>
         </nav>

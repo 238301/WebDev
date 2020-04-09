@@ -106,7 +106,7 @@
 
     </script>
 
-     <div class="menu">
+      <div class="menu">
         <nav class="navbar navbar-expand-md navbar sticky-top navbar-dark bg-dark">
             <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -127,12 +127,17 @@
                     <!----------------------------------^ Edit These Items in your Menu ^ ------------->
                 </div>
                 <div class="navbar-nav ml-auto">
-                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                    <a href="reset_password.php" class="nav-item nav-link active"><i class="fa fa-cog fa-lg" aria-hidden="true"></i><?php echo htmlspecialchars($_SESSION["username"]); ?></a>
+
+                    <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+                    echo "<a href='logout.php' class='nav-item nav-link btn-danger' onclick='return confirm(\"Are you sure?\");'> Logout </a>";
+                    } else { echo "<a href='login.php' class='nav-item nav-link'> Login </a>";} ?>
+
                 </div>
             </div>
         </nav>
     </div>
-    <div class="row">
+   <!-- <div class="row">
         <div class="col-md-6" class=col-lg-8 class=col-sm-4>
             Enter your name: <input type="text" id="fname" onblur="allCaps()">
             <p> When you leave the input field, a function is triggered which transforms the input text to uppercase. </p>
@@ -146,7 +151,7 @@
         <div class="col-md-6">
             <p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
             Enter your name: <input type="text" id="fastCap" onkeyup="fastCap()">
-        </div>
+        </div>-->
 
         <div class="col-md-6" item 2>
             <h2>You know what time it is?</h2>
@@ -173,7 +178,7 @@
                 <p id="shift"></p>
         </div> -->
 
-        <div class="col-md-6"> Enter your name: <input type="text" onfocus="yellowBox(this)">
+       <!-- <div class="col-md-6"> Enter your name: <input type="text" onfocus="yellowBox(this)">
             <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
         </div>
 
@@ -183,7 +188,7 @@
                 <img border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
                 <p> This is a paragraph. </p>
             </div>
-        </div>
+        </div>-->
 
 
         <div class="col-md-12">
